@@ -8,8 +8,3 @@ function solution(array) {
     })
     return cnt;
 }
-
-// 남의 풀이
-function solution(array) {
-    return array.join('').split('7').length-1;
-}

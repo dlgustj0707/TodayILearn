@@ -1,6 +1,6 @@
-function solution(s) {
+function solution(s) { 
     const set_arr = Array.from(new Set(s)).sort();
-    const sort = [...s].sort();
+    const sort = [...s].sort(); 
     const answer = [];
 
     for (let i = 0; i < set_arr.length; i++){
@@ -16,8 +16,8 @@ function solution(s) {
 }
 
 // 남의 풀이
-function solution(s) {
-    let res = [];
+function solution(s) { 
+    let res = [];           
     for (let c of s) if (s.indexOf(c) === s.lastIndexOf(c)) res.push(c);
     return res.sort().join('');
 }
