@@ -1,6 +1,6 @@
 function solution(keyinput, board) {
     var answer = [0,0];
-    
+
     keyinput.map((e) => {
         switch(e){
             case 'left':
@@ -16,7 +16,6 @@ function solution(keyinput, board) {
                 answer[1] -= 1;
                 break;
         }
-        console.log(answer);
         for (let i = 0; i < answer.length; i++){
             if (Math.abs(answer[i]) > Math.floor(board[i]/2)){
                 (answer[i] < Math.floor(board[i]/2)) ? answer[i] = -Math.floor(board[i]/2) : answer[i] = Math.floor(board[i]/2);
@@ -26,4 +25,17 @@ function solution(keyinput, board) {
 
     return answer;
 }
-solution(["right", "right", "right", "right", "right", "left"],[9, 5]);
+
+// 남의 풀이
+function solution(keyinput, board) {
+    let res = [0,0];
+    for (let p of keyinput) {
+        switch(p){
+            case 'left': if (-res[0] < board[0]/2-1) res[0]--; break;
+            case 'right': if (res[0] < board[0]/2-1) res[0]++; break;
+            case 'up': if (res[1] < board[1]/2-1) res[1]++; break;
+            case 'down': if (-res[1] < board[1]/2-1) res[1]--; break;
+        }
+    }
+    return res;
+}
