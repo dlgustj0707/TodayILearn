@@ -10,7 +10,6 @@ function solution(id_pw, db) {
         } else {
             answer = 'fail'
         }
-            
     }
     return answer;
 }
