@@ -1,5 +1,4 @@
 function solution(n) {
-    var answer = 0;
     let count = 0;
     let num = 1;
     let preCount = 0;
