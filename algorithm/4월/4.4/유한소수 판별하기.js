@@ -29,3 +29,9 @@ function solution(a, b) {
 
     return b === 1 ? 1 : 2;   
 }
+
+// 남의 풀이 => 이 풀이는 추천하지 않음
+function solution(a,b) {
+    // toFixed(10) => 소수점 10자리까지만 보여준다
+    return Number((a/ b).toFixed(10)) == a / b ? 1 : 2;
+}
