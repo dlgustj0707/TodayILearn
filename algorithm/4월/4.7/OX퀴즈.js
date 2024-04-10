@@ -1,6 +1,7 @@
 function solution(quiz) {
     const answer = []
     quiz.map((e) => {
+ 
         let arr = e.split(" ");
         
         if (arr[1] === "+"){
@@ -27,7 +28,6 @@ function solution(quiz) {
         const [calc, result] = t.split(' = ');
         const sign = calc.includes('+') ? 1 : -1
         const [a, b] = calc.split(sign === 1 ? ' + ' : ' - ');
-
-        return +a + (+b * sign) === +result ? 'O' : 'X'
+        return +a + (+b * sign) === +result ? 'O' : 'X' // +a는 a를 숫자로 만들어줌
     });
 }
