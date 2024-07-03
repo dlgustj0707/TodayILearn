@@ -1,7 +1,6 @@
 // function solution(num, total) {
 //     const arr = new Array(num).fill().map((v,i) => i+1);
 //     let sum = 0;
-
 //     // arr의 합을 구한다.
 //     arr.map((e) => {
 //         sum += e;
@@ -26,6 +25,7 @@
 
 function solution(num, total) {
     var answer = [];
+    
     let first_value = Math.floor(total/num) - Math.floor((num-1)/2);
     for (let i = 0; i < num; i++){
         answer.push(first_value);
