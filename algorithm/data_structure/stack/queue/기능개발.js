@@ -1,8 +1,8 @@
-function solution(progresses, speeds) {
+function solution(progresses, speeds) { // [93,30,55] / [1,30,5]
     var arr = [];
     let answer = [];
 
-    for (let i=0;i<progresses.length; i++)
+    for (let i=0; i<progresses.length; i++)
         // 완료가 되는데 얼마나 걸리는지를 arr에 넣어준다.
         arr.push(Math.ceil((100 - progresses[i]) / speeds[i]));
     
@@ -15,7 +15,7 @@ function solution(progresses, speeds) {
             count = 1;
             max = arr[i];
         }
-        else { // value >= arr[i]
+        else { // max >= arr[i]
             count++;
         }
     }

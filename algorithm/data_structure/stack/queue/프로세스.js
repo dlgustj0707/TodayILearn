@@ -1,9 +1,10 @@
 function solution(priorities, location) {
     var answer = 0;
-    let index=0;
-    for (let j=1; j<=priorities.length; index++) {
+    let index = 0;
+    
+    for (let j=1; j<=priorities.length; index++) {  // j는 프로세스 돌아가는 순서
         max = Math.max(...priorities);
-        if (index == priorities.length)
+        if (index == priorities.length)  // 인덱스가 넘어갈 경우 0으로
             index = 0;
         if (priorities[index] == max) {
             if(index === location){
